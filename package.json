@@ -1,11 +1,9 @@
 {
-  "name": "burninator-serverless",
+  "name": "burninator-service",
   "version": "1.0.0",
-  "description": "",
-  "main": "handler.js",
+  "description": "Burninator GraphQL Backend",
   "dependencies": {
-    "aws-sdk": "^2.454.0",
-    "moment": "^2.24.0"
+    "serverless-rust": "^0.3.4"
   },
   "devDependencies": {},
   "scripts": {

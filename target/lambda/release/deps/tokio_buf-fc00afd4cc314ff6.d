@@ -1,0 +1,16 @@
+/code/target/lambda/release/deps/libtokio_buf-fc00afd4cc314ff6.rlib: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/never.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/size_hint.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/str.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/u8.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/mod.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/chain.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/collect.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/from.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/iter.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/limit.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/stream.rs
+
+/code/target/lambda/release/deps/tokio_buf-fc00afd4cc314ff6.d: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/never.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/size_hint.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/str.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/u8.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/mod.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/chain.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/collect.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/from.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/iter.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/limit.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/stream.rs
+
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/lib.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/never.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/size_hint.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/str.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/u8.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/mod.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/chain.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/collect.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/from.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/iter.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/limit.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-buf-0.1.1/src/util/stream.rs:
