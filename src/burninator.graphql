@@ -1,0 +1,124 @@
+type Backlog {
+    id: ID!
+    name: String!
+    stories: [Story!]!
+}
+
+type Story {
+    id: ID!
+    summary: String!
+    effort: Int!
+    completedEffort: Int!
+    backlog: Backlog!
+    deliverable: Deliverable
+}
+
+interface Deliverable {
+    id: ID!
+    summary: String!
+    backlog: Backlog!
+    effort: Int!
+    completedEffort: Int!
+    stories: [Story!]!
+}
+
+type Milestone implements Deliverable {
+    id: ID!
+    summary: String!
+    effort: Int!
+    completedEffort: Int!
+}
+
+type Release implements Deliverable {
+    id: ID!
+    summary: String!
+    effort: Int!
+    completedEffort: Int!
+}
+
+scalar TimeCoordinate # point in time in the universe, to millisecond precision
+
+type ForecastParameters {
+  velocity: Int!
+  scopeFactor: Float!
+}
+
+type DeliverableForecast {
+    naive: TimeCoordinate!
+    enlightened: TimeCoordinate!
+    backlog: Backlog!
+    deliverable: Deliverable!
+    storyForecasts: [StoryForecast!]!
+}
+
+type StoryForecast {
+    naive: TimeCoordinate!
+    enlightened: TimeCoordinate!
+    backlog: Backlog!
+    story: Story!
+    deliverableForecast: DeliverableForecast!
+}
+
+type Forecast {
+    when: TimeCoordinate!
+    parameters: ForecastParameters!
+    deliverableForecasts: [DeliverableForecast!]!
+    storyForcasts: [StoryForcast!]!
+}
+
+type VelocitySample {
+    when: TimeCoordinate!
+    velocity: Int!
+}
+
+type Iteration {
+Type: Iteration
+    id: ID!
+    name: String
+    from: TimeCoordinate!
+    to: TimeCoordinate
+    effort: WholeNumber
+    completedEffort: Int!
+}
+
+type Query {
+
+    Backlogs: [Backlog!]!
+    Backlog(backlogRef: ID!): Backlog
+    Forecast(backlogRef: ID!, when: TimeCoordinate, velocity: Int, scopeFactor: Float): Forecast
+    Velocity(backlogRef: ID!, from: TimeCoordinate, )
+
+}
+
+
+
+# Query: Backlogs() :: {Backlog}
+# Query: Backlog(id: BACKLOG_ID) :: Backlog
+# Query: Forecast(backlogRef: BACKLOG_ID, when?: TimeCoordinate, parameters?: ForecastParameters) :: Forecast
+#   - if parameters not supplied, considers configured forecast parameters at the time
+#   - if when is not supplied, use NOW according to service's clock
+# Query: Velocity(backlogRef: BACKLOG_ID, from: TimeCoordinate, to?: TimeCoordinate) :: [VelocitySample]
+#   - if to is not supplied, implies NOW as determined by service's clock
+#   - from inclusive
+#   - to exclusive if supplied
+
+# InputType: TimeCoordinate :: {{point in universal time with millisecond precision}}
+
+# InputType: ConfiguredForecastParameters
+#   - velocity?: NaturalNumber  // missing indicates use computed velocity
+#   - scopeFactor?: PositiveRationalNumber // missing indicates use system default 0.3
+
+# Mutation: DefaultForecastParameters(backlogRef: BACKLOG_ID, when?: TimeCoordinate, parameters?: ForecastParameters)
+#   - set the default forecast parameters to start at a point in time, semantic is that these defaults are in effect until the next configured point or the end of the universe
+#   - if when is not supplied, use service's clock to determine NOW
+#   - if parameters is not supplied, use empty (i.e. computed velocity, default scope factor)
+#   - system can remove redundancy when reporting parameter timeline
+# Mutation: SnapshotForecast(backlogRef: BACKLOG_ID, when?: TimeCoordinate, name?: Text)
+#   - create a forecast snapshot
+#   - if when is not supplied, use service's clock to determine NOW
+#   - if name is not supplied, snapshot is unnamed
+
+
+
+
+

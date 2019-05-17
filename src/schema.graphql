@@ -1,0 +1,51 @@
+schema {
+    query: Query
+}
+
+type Query {
+    hello(name: String!): String! @juniper(ownership: "owned")
+    backlogs: [Backlog!]! @juniper(ownership: "owned")
+}
+
+type Backlog {
+    id: ID! @juniper(ownership: "owned")
+    name: String!  @juniper(ownership: "owned")
+}
+
+# "Hey a root query"  type Query {
+#     "#[ownership(owned)] Determine if a subject is permitted to perform actions"
+#         canPerform(
+#             "Subject principals for which access is controlled" subject: [String!]!
+#             "Requested resource actions" resourceActions: [ResourceActionInput!]!
+#             )
+#             : QueryResult!
+# }
+
+# type QueryResult {
+#     "#[ownership(owned)]"
+#     all: Boolean!
+
+#     "#[ownership(owned)]"
+#     any: Boolean!
+
+#     "#[ownership(owned)]"
+#     allow: [ResourceAction!]!
+
+#     "#[ownership(owned)]"
+#     deny: [ResourceAction!]!
+# }
+
+# type ResourceAction {
+#     "#[ownership(owned)]"
+#     namespace: String!
+#     "#[ownership(owned)]"
+#     action: String!
+#     "#[ownership(owned)]"
+#     resource: [String!]!
+# }
+
+# "Namespaced resource and action" input ResourceActionInput {
+#     namespace: String!
+#     action: String!
+#     resource: [String!]!
+# }
